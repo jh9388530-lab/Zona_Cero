@@ -1,0 +1,83 @@
+
+:root{--bg:#1f2f36;--fg:#f4efe6;--ac:#ff7a45;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+html,body{height:100%;margin:0;background:var(--bg);color:var(--fg);font-family:"Trebuchet MS","Segoe UI",sans-serif;overflow:hidden;touch-action:none;user-select:none;-webkit-user-select:none}
+canvas{position:fixed;inset:0;width:100%;height:100%;cursor:none}
+#ov{position:fixed;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;background:rgba(18,28,33,.88);text-align:center;padding:24px}
+#ov h1{margin:0;font:900 clamp(44px,12vw,92px)/.9 Impact,"Arial Black",sans-serif;letter-spacing:-2px;color:var(--ac)}
+#ov p{margin:0;font-size:18px;max-width:34ch}
+#st{display:flex;gap:8px;flex-wrap:wrap;justify-content:center}#st button{font-size:13px;padding:8px 12px;background:rgba(244,239,230,.85)}
+#ov small{opacity:.7;max-width:48ch;line-height:1.5}
+button{font:700 18px inherit;font-family:inherit;background:var(--ac);color:#1f2f36;border:0;border-radius:10px;padding:14px 34px;cursor:pointer}
+button:focus-visible{outline:3px solid var(--fg);outline-offset:3px}
+.gb{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;min-width:46px;height:46px;padding:0 6px;border-radius:11px;border:2px solid #2a8fd0;background:rgba(8,18,30,.74);color:#e8f4ff;font:700 10px system-ui;box-shadow:0 0 8px rgba(42,143,208,.35)}.gb:active{background:rgba(30,80,130,.9)}.gb svg{width:24px;height:24px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+#bP{display:none;width:40px;min-width:40px!important;height:40px}.t #bP{display:flex;top:calc(env(safe-area-inset-top,0px) + 8px)}.t #bP{right:calc(env(safe-area-inset-right,0px) + 8px)}
+#b21{display:none}.t #b21{display:flex;left:var(--mmx,4px);top:var(--mmy,100px)}
+#tr,#tq,#b16{display:none}.t #tr,.t #tq,.t #b16{display:flex}#tr{position:fixed;right:8px;top:8px;gap:6px}
+#gcN{position:absolute;right:5px;bottom:1px;font:900 11px system-ui}
+#b16{position:fixed;right:8px;top:116px;flex-direction:row;gap:6px;height:44px;padding:0 10px;border-color:#ff7a45;box-shadow:0 0 10px rgba(255,122,69,.55);visibility:hidden;font-size:12px}#b16 svg{width:22px;height:22px}#b16.bl{animation:bl .7s steps(2,jump-none) infinite}
+#tq{position:fixed;right:8px;top:62px;gap:6px}#tq .gb{width:61px;min-width:61px;height:50px;padding:0}#tq .gb span{font-size:9px}
+@keyframes bl{0%{opacity:1}100%{opacity:.35}}
+#ov{overflow-y:auto;touch-action:pan-y;justify-content:safe center}@media(max-height:520px){#ov{gap:8px;padding:12px}#ov h1{font-size:40px}#ov p{font-size:15px}}
+#hs .g,#kpl .g{display:flex;flex-direction:column;gap:3px}#hs b,#kpl b{color:#ff7a45;font-size:12px;letter-spacing:.5px}#hs span,#kpl span{display:block}kbd{background:rgba(244,239,230,.16);border-radius:5px;padding:1px 6px;margin-right:6px;font:700 11px system-ui}
+#kpl{display:none;position:fixed;left:50%;bottom:12px;transform:translateX(-50%);z-index:5;max-width:96vw;gap:8px 24px;flex-wrap:wrap;justify-content:center;padding:10px 16px;border-radius:12px;border:2px solid #2a8fd0;background:rgba(8,18,30,.88);font:12px/1.4 system-ui;color:#e8f4ff;pointer-events:none}#kpl.o{display:flex}.t #kpl{display:none!important}
+#tr .gb,#tq .gb,.gb{width:54px;min-width:54px!important;height:54px;padding:0;border-radius:50%}
+.gb span{font-size:9px;line-height:1}#amN{font-size:10px}
+#tq{top:68px}#b16{top:128px;width:54px;height:54px;padding:0;flex-direction:column;border-radius:50%;gap:1px}#b16 span{font-size:9px}
+.t #b7,.t #b20,.t #b1,.t #b13{position:fixed;bottom:calc(max(85px,25vh) + 76px)}
+.t #b7{left:calc(max(85px,11vw) - 58px)}.t #b20{left:calc(max(85px,11vw) + 4px)}
+.t #b1{right:calc(max(85px,11vw) - 58px)}.t #b13{right:calc(max(85px,11vw) + 4px)}
+/* ergonomía táctil: tácticos alrededor del pulgar izquierdo, de combate alrededor del derecho */
+:root{--c:max(85px,11vw);--b:max(85px,25vh)}
+.t .gb{position:fixed;top:auto}
+.t #b7{left:calc(var(--c) - 58px);bottom:calc(var(--b) + 76px)}
+.t #b20{left:calc(var(--c) + 4px);bottom:calc(var(--b) + 76px)}
+.t #b5{left:calc(var(--c) + 91px);bottom:calc(var(--b) - 15px)}
+.t #b16{left:calc(var(--c) + 69px);bottom:calc(var(--b) + 47px)}
+.t #b10{left:calc(var(--c) + 65px);bottom:calc(var(--b) - 72px)}
+.t #b1{right:calc(var(--c) - 58px);bottom:calc(var(--b) + 76px)}
+.t #b13{right:calc(var(--c) + 4px);bottom:calc(var(--b) + 76px)}
+.t #b8{right:calc(var(--c) + 69px);bottom:calc(var(--b) + 47px)}
+.t #b3{right:calc(var(--c) + 87px);bottom:calc(var(--b) - 19px);width:62px;height:62px;min-width:62px!important;border-color:#ff7a45;box-shadow:0 0 10px rgba(255,122,69,.5)}
+.t #b2{right:calc(var(--c) + 65px);bottom:calc(var(--b) - 72px)}
+.gb{transition:transform .08s}.gb:active{transform:scale(.9)}
+body.mn .gb,body.mn #tr,body.mn #tq{display:none!important}
+@keyframes pls{50%{transform:scale(1.04)}}
+
+/* ===== Remaster: menú cinemático ===== */
+:root{--st:"Saira Stencil One",Impact,"Arial Black",sans-serif;--bd:"Barlow Condensed","Arial Narrow","Trebuchet MS",sans-serif}
+#ov h1,#ov button,#ov p,#ov small{font-family:var(--bd)}
+#ov h1{font-family:var(--st);font-weight:400;letter-spacing:.02em;text-transform:uppercase}#vs{font:600 14px var(--bd);color:#9fc0cc;margin:6px 0 0;max-width:min(520px,92vw)}
+@keyframes tin{0%{opacity:0;transform:translateX(-26px);filter:blur(6px)}100%{opacity:1;transform:none;filter:none}}/* pausa / game over con la misma voz */
+
+/* ===== Remaster: controles táctiles ===== */
+.t .gb{z-index:3}.gb span{position:relative;z-index:2}
+.gb::after{content:"";position:absolute;inset:0;border-radius:50%;pointer-events:none;background:conic-gradient(rgba(255,255,255,.34) calc(var(--cd,0)*360deg),transparent 0);box-shadow:inset 0 0 0 calc(var(--cd,0)*100px) rgba(0,0,0,.28)}
+.gb svg{position:relative;z-index:1}
+.gb.pop{animation:gpop .35s ease-out}@keyframes gpop{0%{box-shadow:0 0 0 0 rgba(255,255,255,.8)}100%{box-shadow:0 0 0 14px rgba(255,255,255,0)}}
+/* combate: mano derecha, naranja */
+#b1,#b2,#b3,#b8{border-color:#ff7a45;box-shadow:0 0 10px rgba(255,122,69,.4);background:rgba(30,14,8,.74)}
+#b1:active,#b2:active,#b3:active,#b8:active{background:rgba(120,50,20,.9)}
+#b3{border-width:3px;box-shadow:0 0 14px rgba(255,122,69,.6)}
+#b1.lo{border-color:#ff4d6d;box-shadow:0 0 12px rgba(255,77,109,.7);color:#ffb3c0}
+.t #b2{right:calc(var(--c) + 132.0px - 27px);bottom:calc(var(--b) + 0.0px - 27px);top:auto;left:auto;width:54px!important;min-width:54px!important;height:54px!important}
+.t #b3{right:calc(var(--c) + 111.9px - 32px);bottom:calc(var(--b) + 69.9px - 32px);top:auto;left:auto;width:64px!important;min-width:64px!important;height:64px!important}
+.t #b1{right:calc(var(--c) + 62.0px - 27px);bottom:calc(var(--b) + 116.5px - 27px);top:auto;left:auto;width:54px!important;min-width:54px!important;height:54px!important}
+.t #b8{right:calc(var(--c) + 0.0px - 27px);bottom:calc(var(--b) + 132.0px - 27px);top:auto;left:auto;width:54px!important;min-width:54px!important;height:54px!important}
+/* tácticos: mano izquierda, azul */
+.t #b5{left:calc(var(--c) + 132.0px - 25px);bottom:calc(var(--b) + 0.0px - 25px);top:auto;right:auto;width:50px!important;min-width:50px!important;height:50px!important}
+.t #b22{left:calc(var(--c) + 114.3px - 25px);bottom:calc(var(--b) + 66.0px - 25px);top:auto;right:auto;width:50px!important;min-width:50px!important;height:50px!important}
+.t #b10{left:calc(var(--c) + 66.0px - 25px);bottom:calc(var(--b) + 114.3px - 25px);top:auto;right:auto;width:50px!important;min-width:50px!important;height:50px!important}
+.t #b7{left:calc(var(--c) + 0.0px - 25px);bottom:calc(var(--b) + 132.0px - 25px);top:auto;right:auto;width:50px!important;min-width:50px!important;height:50px!important}
+.t #b5 svg,.t #b22 svg,.t #b10 svg,.t #b7 svg{width:19px;height:19px}.t #b5 span,.t #b22 span,.t #b10 span,.t #b7 span{font-size:8px}
+/* gestión: arriba a la derecha */
+.t #bP{top:calc(env(safe-area-inset-top,0px) + 8px);right:calc(env(safe-area-inset-right,0px) + 8px)}
+.t #b20,.t #b13{top:calc(env(safe-area-inset-top,0px) + 6px);bottom:auto;left:auto;width:44px!important;min-width:44px!important;height:44px!important}
+.t #b20{right:calc(env(safe-area-inset-right,0px) + 56px)}.t #b13{right:calc(env(safe-area-inset-right,0px) + 108px)}
+.t #b20 svg,.t #b13 svg{width:18px;height:18px}.t #b20 span,.t #b13 span{font-size:7.5px}
+.t #b16{top:calc(env(safe-area-inset-top,0px) + 62px);right:calc(env(safe-area-inset-right,0px) + 8px);bottom:auto;left:auto}
+/* guías de zona de pulgar */
+body.t:not(.mn)::before,body.t:not(.mn)::after{content:"";position:fixed;z-index:1;pointer-events:none;width:320px;height:320px;border-radius:50%}
+body.t:not(.mn)::before{left:calc(var(--c) - 160px);bottom:calc(var(--b) - 160px);background:radial-gradient(circle,transparent 98px,rgba(42,143,208,.13) 99px,rgba(42,143,208,.05) 160px,transparent 161px);-webkit-mask-image:conic-gradient(from 0deg,#000 0 100deg,transparent 0);mask-image:conic-gradient(from 0deg,#000 0 100deg,transparent 0)}
+body.t:not(.mn)::after{right:calc(var(--c) - 160px);bottom:calc(var(--b) - 160px);background:radial-gradient(circle,transparent 98px,rgba(255,122,69,.13) 99px,rgba(255,122,69,.05) 160px,transparent 161px);-webkit-mask-image:conic-gradient(from 260deg,#000 0 100deg,transparent 0);mask-image:conic-gradient(from 260deg,#000 0 100deg,transparent 0)}
+#cv0{position:fixed;inset:0;z-index:99;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;background:radial-gradient(ellipse at 50% 40%,#2a424c 0%,#121c21 70%);transition:opacity .5s}#cv0.x{opacity:0;pointer-events:none}#cv0 h1{margin:0;font:400 clamp(48px,13vw,120px)/.9 "Saira Stencil One",Impact,sans-serif;text-transform:uppercase;background:linear-gradient(180deg,#fff0cf,#ffb25a 48%,#ff6a2b);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 4px 0 #6b2209)}#cv0 p{margin:0;font:600 15px "Barlow Condensed",Impact,sans-serif;letter-spacing:.3em;color:#f1dcc0;text-transform:uppercase}#cvbox{width:min(320px,70vw);height:6px;background:rgba(255,255,255,.12);border-radius:3px;overflow:hidden}#cvb{height:100%;width:0;background:#ff7a45;transition:width .25s}#cvt{font:600 13px "Barlow Condensed",sans-serif;color:#9fc0cc;letter-spacing:.1em}
